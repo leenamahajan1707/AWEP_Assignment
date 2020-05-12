@@ -41,15 +41,5 @@ int main()
 			cout<<"no not found ";
 			break;
 	}
-//		if(no==a[i])
-//		{
-//	 	cout<<no<<" number is found at "<<i+1<<endl;
-//		}
-//		else
-//		{
-//			cout<<no<<" number is not in the array"<<endl;
-//		}
-		
-//	}
 	return 0;
 }
