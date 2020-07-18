@@ -10,9 +10,7 @@ show tables;
 	select * from customers c,salespeople s where c.snum=s.snum And (s.sname='Peel' or s.sname='Motika');
 
 -- 3) Write a query that will produce all the customers whose names begin with a letter from ‘A’ to ‘G’.
-	-- select * from customers where cname like '[A-G]%';              not working
--- 	SELECT * FROM customers WHERE Cname BETWEEN 'A' AND 'G';			not working
-     SELECT cname FROM customers WHERE cname REGEXP '^[A-G].*$';
+    select * from customers where cname between 'A%' and 'H%';
    
     SELECT * FROM customers WHERE cname LIKE 'a%'
     OR cname LIKE 'b%'
