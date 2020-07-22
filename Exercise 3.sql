@@ -27,4 +27,17 @@ select * from s;
     
 -- 8. Use the soundex function to search for a supplier by the name of ‘BLOKE’.
     select sname from s where soundex(sname) = soundex('bloke');
-    
+
+-- 9. Display the Supplier name and the status (as Ten, Twenty, Thirty, etc.) 
+	  select status, case
+	  when status=10 then 'Ten'
+	  when status=20 then 'twenty'
+	  when status=30 then 'thirty'
+	  when status=40 then 'fourty'
+	   when status=50 then 'fifty'
+	  else 'NA'
+	  end as world
+	  from s;
+  
+  -- 10. Display the current day (e.g. Thursday).
+  select dayname(sysdate()) from dual;							 
