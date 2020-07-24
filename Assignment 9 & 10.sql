@@ -29,7 +29,18 @@ select * from salespeople;
 
 -- 2) Write a query that produces the names and cities of all customers with the same
 -- rating as Hoffman.
-	select cname ,city from customers where rating=(select rating from customers where cname='Hoffman');
+
+	SELECT  c1.rating, c1.cname , c2.city
+	FROM customers c1, customers c2
+	WHERE c1.rating = (SELECT rating FROM customers WHERE cname='Hoffman')
+	GROUP BY c1.cname;
+
+    
+	select c1.rating, c1.cname , c2.city 
+		from customers c1, customers c2 
+		where c1.rating=c2.rating
+		group by c1.cname
+		having c1.rating = (select rating from customers where cname='Hoffman');
     
 	select c1.rating, c1.cname , c2.city 
 		from customers c1, customers c2 
