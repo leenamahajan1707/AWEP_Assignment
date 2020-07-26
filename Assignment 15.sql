@@ -16,7 +16,11 @@ select * from salespeople;
         
 -- 2) Write a command that deletes all customers with no current orders.
 
-		delete from customers where cnum = any (select cnum from customers where cnum not In (select cnum from orders));
+	1) delete from customers where cnum = any (select cnum from customers where cnum not In (select cnum from orders));
+	2) DELETE customers FROM customers
+        	LEFT JOIN
+		orders ON customers.cnum = orders.cnum 
+		WHERE onum IS NULL;
 
 -- 3) Write a command that increases by twenty percent the commissions of all salespeople with total orders above Rs. 3,000.
 	update salespeople set comm= (1.20 * comm) where snum In (select snum from orders where amt >  3000);
