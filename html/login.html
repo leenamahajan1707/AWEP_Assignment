@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+</head>
+<script>
+
+</script>
+
+<body>
+    <form action="home.html">
+
+
+        <div class="container"
+            style="background-image: url(https://picsum.photos/seed/picsum/1600/800);background-repeat: no-repeat; object-fit: cover; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div class="border" style="border: 1px solid;padding: 2vw;border-radius: 5%;">
+
+                <div class="namefield" style="padding: 2vh;">
+
+                    <label for="uname" style="padding: 4vh;"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" min=3 max=12 required>
+                </div>
+
+                <div class="namefield" style="padding: 2vh;">
+                    <label for="psw" style="padding: 4vh;"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" min=5 max=12 required>
+                </div>
+
+                <div style="padding: 2vh; display: flex; justify-content: center;">
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                    <label>
+                        <input type="checkbox" checked="checked" name="keepSignedIn"> Keep Me Signed In
+                    </label>
+                </div>
+
+                <div style="padding: 2.3vh; display: flex; justify-content: center;">
+                    <button type="submit" style="padding: 1.5vh;">Login</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- *Problem statement :*
+ 
+Create *LOGIN PAGE* using *flex* with  following details :
+
+ *1.Username* Textbox
+ *2.Password*  Textbox
+ *3.Login* Button
+ *4.Remember Me* Checkbox
+ *5.Keep Me Signed In* Checkbox
+
+ *_Apply client-side validation on each field_ .* 
+
+ *Username field contains* *:* 
+
+numeric, alphanumeric, alphabets texts, no special characters except *@*.
+Length: min 3 characters max 12 characters
+
+ *Password field contains* 
+
+Alphanumeric,  special characters except *@*.
+Length: min 5 characters max 12 characters
+
+If Username and Password is invalid don't allow to redirect to home page 
+
+Show invalid Username and Password message 
+
+After successful submission redirects the user to the home page.
+ Display user name and password on the home page. -->

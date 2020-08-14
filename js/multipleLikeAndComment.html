@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>dynamic like and comment</title>
+    <script src="multipleLikeAndComment.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row bg-dark align-items-center" style="height: 5em; ">
+            <div class="col text-light">Navbar</div>
+            <div class="col text-light d-flex justify-content-end">logout</div>
+        </div>
+        <div class="row justify-content-center mt-1">
+            <div class="col-12 col-md-6  ">
+                <div class="row border">
+                    <div class="col img-responsive img-fluid p-0" style="height: 10rem;">
+                        <img src="/images/Penguins.jpg" alt="" width="100%" height="100%">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2 p-0 ">
+                        <button class="btn btn-sm btn-outline-secondary btn-block" onclick="likecount(this)">
+                            Like <span>0</span>
+                        </button>
+                    </div>
+                    <div class="col-7 p-0">
+                        <input type="text" placeholder="enter comment" class="form-control form-control-sm">
+                    </div>
+                    <div class="col-3 p-0">
+                        <button class="btn btn-sm btn-outline-secondary btn-block" onclick="addcomment(this)">
+                            comment
+                        </button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column">
+                    <div class="row mt-1">
+                        <div class="col">sample comment</div>
+                        <div class="col-2 p-0">
+                            <button class="btn btn-sm btn-outline-danger btn-block" onclick="callDelete(this)">
+                                delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row justify-content-center mt-1">
+            <div class="col-12 col-md-6  ">
+                <div class="row border">
+                    <div class="col img-responsive img-fluid p-0" style="height: 10rem;">
+                        <img src="/images/Tulips.jpg" alt="" width="100%" height="100%">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2 p-0 ">
+                        <button class="btn btn-sm btn-outline-secondary btn-block" onclick="likecount(this)">
+                            Like <span>0</span>
+                        </button>
+                    </div>
+                    <div class="col-7 p-0">
+                        <input type="text" placeholder="enter comment" class="form-control form-control-sm">
+                    </div>
+                    <div class="col-3 p-0">
+                        <button class="btn btn-sm btn-outline-secondary btn-block" onclick="addcomment(this)">
+                            comment
+                        </button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column">
+                    <div class="row mt-1">
+                        <div class="col">sample comment</div>
+                        <div class="col-2 p-0">
+                            <button class="btn btn-sm btn-outline-danger btn-block" onclick="callDelete(this)">
+                                delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

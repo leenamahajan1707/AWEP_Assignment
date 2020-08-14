@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function passvalue() {
+        let fname = document.querySelectorAll("input")[0].value;
+        localStorage.setItem("textvalue1", fname)
+        let sname = document.querySelectorAll("input")[1].value;
+        localStorage.setItem("textvalue2", sname)
+        return false;
+
+    }
+</script>
+
+<body>
+    <form action="passInputFromOneToAnotherPage1.html">
+
+        <input type="text" id="username" name="Fname" placeholder="enter name">
+        <input type="text" name="sname" placeholder="enter surname">
+        <input type="submit" value="click" onclick="passvalue()">
+    </form>
+</body>
+
+
+</html>

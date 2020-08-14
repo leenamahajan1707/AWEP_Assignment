@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js alert demo</title>
+    <style>
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+    <script>
+        let counter = 1;
+        function increment() {
+            let cele = document.querySelector('#count')
+            counter = counter + 1;
+            cele.innerHTML = counter;
+        }
+
+
+
+        function decrement() {
+            let cele = document.querySelector('#count')
+            counter = counter - 1;
+            cele.innerHTML = counter;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main">
+
+        <div id="count" style="font-size: 5em; ">1</div>
+        <div>
+
+            <button style="padding: 5px;" onclick="increment()">INCREMENT</button>
+            <button style="padding: 5px;" onclick="decrement()">DECREMENT</button>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

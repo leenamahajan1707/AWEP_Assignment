@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    like = 1;
+    dislike = 1;
+    function changeLike() {
+        let countlike = document.querySelectorAll("button")[0];
+        countlike.innerHTML = "like " + like;
+        like++;
+    }
+
+    function changeDislike() {
+        let countDislike = document.querySelectorAll("button")[1];
+        countDislike.innerHTML = "Dislike " + dislike;
+        dislike++;
+    }
+
+</script>
+
+<body>
+    <div style=" display: flex; justify-content: center; align-items: center;height: 100vh;">
+        <div style=" background-color: rgb(226, 151, 52); padding: 5vh;">
+
+            <button type="submit" onclick="changeLike()">Like 0</button>
+            <button type="submit" onclick="changeDislike()">Dislike 0</button>
+        </div>
+    </div>
+</body>
+
+</html>

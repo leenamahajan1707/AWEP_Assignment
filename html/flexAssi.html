@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>flex</title>
+</head>
+<style>
+    .one {
+        display: flexbox;
+        margin: 10vh 15vw 0 25vw;
+        width: 50%;
+    }
+
+    .two {
+        display: flex;
+
+    }
+
+    .header {
+        display: flex;
+        background-color: palevioletred;
+        height: 17vh;
+        /* width: 61%; */
+        flex: 6;
+        border: 1px solid black;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .L {
+        background-color: palevioletred;
+        height: 50vh;
+        /* width: 10%; */
+        flex: 1;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 2px 2px 2px 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main {
+        background-color: palevioletred;
+        height: 50vh;
+        /* width: 40%; */
+        flex: 4;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 2px 0 2px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .R {
+        background-color: palevioletred;
+        height: 50vh;
+        /* width: 10%; */
+        flex: 1;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 2px 2px 2px 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer {
+        background-color: palevioletred;
+        height: 17vh;
+        /* width: 61%; */
+        flex: 6;
+        border: 1px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="one">
+        <div class="header"> Header </div>
+        <div class="two">
+            <div class="L"> L </div>
+            <div class="main"> Main </div>
+            <div class="R"> R </div>
+        </div>
+        <div class="footer"> Footer </div>
+    </div>
+</body>
+
+</html>

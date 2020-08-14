@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeOverImg() {
+            document.querySelector('img').alt = "Tulips Image";
+            document.querySelector('img').src = "/images/Tulips.jpg";
+
+        }
+
+        function changeOutImg() {
+            document.querySelector('img').src = "/images/Penguins.jpg";
+        }
+
+    </script>
+</head>
+
+<body>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+
+        <img src="/images/Penguins.jpg" alt="Penguins image" style="width: 50%; height: 60%;"
+            onmouseover="changeOverImg()" on onmouseout="changeOutImg()">
+    </div>
+</body>
+
+</html>

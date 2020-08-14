@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>result page</h1>
+    <h2>
+        name : <span id="result-name"></span>
+    </h2>
+    <h2>
+        surname : <span id="result-surname"></span>
+    </h2>
+</body>
+<script>
+    document.getElementById("result-name").innerHTML = localStorage.getItem("textvalue1");
+    document.getElementById("result-surname").innerHTML = localStorage.getItem("textvalue2");
+
+</script>
+
+</html>
