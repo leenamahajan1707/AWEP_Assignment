@@ -1,0 +1,179 @@
+1.
+1.1.date =>day date time will be shown
+date +%a =>short name of day will be shown only
+date +%A =>full name of day will be shown only
+date +%b =>short name of month will be shown only
+date +%B =>full name of month will be shown only
+date +%d =>short date will be shown only
+date +%D =>full date format will be shown with forward slashes only
+date +%F =>full date format will be shown with hi-fens only
+date +%T =>time will be shown only
+
+1.2.
+cal => show calendar
+cal jan 2020
+
+1.3.
+bc => is basic calculator in linux. after typing this command one can do basic calculator operations
+
+1.4.
+echo => echo command in linux is used to display line of text/string that are passed as an argument .
+1. \b  : it removes all the spaces in between the text
+2. \c : suppress trailing new line with backspace interpreter
+3. \n : this option creates new line from where it is used.
+4. \t : this option is used to create horizontal tab spaces.
+5. \r : carriage return with backspace interpreter ‘-e‘ to have specified carriage return in output.
+6. \v : this option is used to create vertical tab spaces.
+7. \a : alert return with backspace interpreter ‘-e‘ to have sound alert.
+8. echo * : this command will print all files/folders, similar to ls command .
+9. -n : this option is used to omit echoing trailing newline .
+
+1.5.
+who =>  The who command is used to get information about currently logged in user on to system
+
+1.6. whoami =>  To display system’s username
+
+1.7. logname => print user´s login name,Print the name of the current user
+
+1.8. uname => uname is a command-line utility that prints basic information about the operating system name and system hardware
+
+-s, (--kernel-name) - Prints the kernel name.
+-n, (--nodename) - Prints the system’s node name (hostname). This is the name the system uses when communicating over the network. When used with the -n option, uname produces the same output as the hostname command.
+-r, (--kernel-release) - Prints the kernel release.
+-v, (--kernel-version) - Prints the kernel version.
+-m, (--machine) - Prints the name of the machine’s hardware name.
+-p, (--processor) - Prints the architecture of the processor.
+-i, (--hardware-platform) - Prints the hardware platform.
+-o, (--operating-system) - Print the name of the operating system. On Linux systems that is “GNU/Linux”
+-a, (--all) - When the -a option is used, uname behaves the same as if the -snrvmo options have been given.
+
+1.9. seq => seq command in Linux is used to generate numbers from FIRST to LAST in steps of INCREMENT. It is a very useful command where we had to generate list of numbers in while, for, until loop.
+
+1. seq LAST : When only one argument is given then it produces numbers from 1 to LAST in step increment of 1. If the LAST is less than 1, then is produces no output.
+2. seq FIRST LAST : When two arguments are given then it produces numbers from FIRST till LAST is step increment of 1. If LAST is less than FIRST, then it produces no output
+3. seq FIRST INCREMENT LAST : When three arguments are given then it produces numbers from FIRST till LAST in step of INCREMENT. If LAST is less than FIRST, then it produces no output.
+4. seq -f “FORMAT” FIRST INCREMENT LAST : This command is used to generate sequence in a formatted manner. FIRST and INCREMENT are optional.
+5. seq -s “STRING” FIRST INCREMENT LAST : This command is uses to STRING to separate numbers. By default this value is equal to "\n". FIRST and INCREMENT are optional.
+6. seq -w FIRST INCREMENT LAST : This command is used to equalise width by padding with leading zeroes. FIRST and INCREMENT are optional.
+
+1. 10. clear => clear screen.
+
+
+Q2.	A) Create three directory a b and c and create a.txt,b.txt and c.txt
+		in each directory respectively and then copy c directory into the a.
+		
+		mkdir -p comd_prac/{a,b,c}               //make directory
+		touch comd_prac/a/a.txt comd_prac/b/b.txt comd_prac/c/c.txt  //creating txt file in each directory
+		ls -R comd_prac												//show hierarchy
+		cp -r comd_prac/c comd_prac/a								//copy c directory to a directory
+
+		
+
+	B)Move Directory b to c.
+		mv comd_prac/b comd_prac/c
+
+	C)Create alias of ls -lh command to your name.
+		alias leena="ls -lh"       //now instead of writing ls -lh youcan write leena give same result
+
+	
+	D)Change Directory name a to cdac.
+		mv comd_prac/a comd_prac/cdac
+		
+Q3. A) Create five files file1.txt , file2.txt ,file3.txt file4.txt and
+    file5.txt with some text inside it. Search for 's' character
+    inside all the files using grep command.
+	Also Use cat to view all file content together
+		$ cat > file1.txt
+		this is file 1
+
+		$ cat > file2.txt
+		this is file 2
+
+		$ cat > file3.txt
+		this is file 3
+
+		$ cat > file4.txt
+		this is file 4
+
+		$ cat > file5.txt
+		this is file 5
+
+		grep -o "s" file1.txt
+		 cat file1.txt
+
+	B)Create file.txt using cat and edit that using nano editor.
+		Cat > file.txt
+		Hello cdac
+
+	c)Create 5 empty files using touch command
+		touch f1 f2 f3 f4 f5
+	D)Remove previously created directory a , b and c.
+		rm -r a b c
+		
+Q4. Create a file with some content using vi editor
+	a) Display the file using cat command
+		vi file.txt
+		cat file.txt
+	
+	b) Display line numbers along with content
+		cat -n file.txt
+		
+	c) Display the file in reverse order using tac
+		 tac file.txt
+
+	d) Combine multiple files using cat command
+		cat file1.txt file2.txt file3.txt > file4.txt
+
+Q5. Create Random some files and sub directories.
+	a) display files row wise, column wise, 1 per row
+	b) sort the files in ascending, descending order
+		sort file4.txt      //ascending
+		sort -r file4.txt	//descending
+	c) Create some hidden files and sub directories and display them using “ls -a”
+	d) Change time stamp of some files and directories using touch command and display the files using ls -t ls -rt
+	e) Recursive display contents of your home directory.
+	f) display all attributes of files and directories using ls -l
+	g) display attributes of a directory using ls -ld
+	
+Q1. Create directory of your name and then create 4 files inside it named
+	a.txt, b.txt, c.txt and d.sh. And change the directory permission to
+	only user and also files permission to only user such that
+		mkdir Leena 
+		touch a.txt b.txt c.txt d.sh
+		chmod 700 leena
+		a)user can read and write the file a.txt and b.txt
+			 chmod 600 a.txt b.txt
+
+		b)user can write the file c.txt
+			ls -l c.txt
+
+		c)user can exectuable the file d.sh. Make
+			Contents of file d.sh:
+			#/bin/sh
+			ls -lh
+			chmod 100 d.sh
+			
+Q2. Change the permission of the previous directory to executable only.
+		chmod +x m1
+
+Q3. Change the permission of the previous directory to read only.
+	$ chmod 444 m1
+
+Q4. Use echo to list the all files of your home directory.
+	echo * 
+
+Q5. Use echo to list the all files of /etc/ directory
+	echo * /etc/
+	
+Q6. Use echo to list the all files of /etc/ directory with extension name .conf
+	find /etc -type f -name "*.conf"
+	
+Q7. Use echo to append your name to a.txt
+	echo 'Leena' >> a.txt
+
+
+
+
+
+
+
